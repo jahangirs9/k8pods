@@ -1,0 +1,11 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: testpod1
+spec:
+  containers:
+    - name: try1
+      image: ubuntu
+      command: ["/bin/bash", "-c", "while true; do echo himanshu; sleep 5; done"]
+  restartPolicy: Never
+

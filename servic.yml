@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my1service
+spec:
+  type: NodePort
+  selector:
+    name: myfav
+  ports:
+    - name: http
+      targetPort: 80
+      port: 80
+      nodePort: 31365
+

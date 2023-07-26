@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mydeploy
+spec:
+  selector:
+    matchLabels:
+      name: myfav
+  template:
+    metadata:
+      labels:
+        name: myfav
+    spec:
+      containers:
+        - name: ser1
+          image: levelupk8/k8:version1
+          ports:
+            - containerPort: 80
+
